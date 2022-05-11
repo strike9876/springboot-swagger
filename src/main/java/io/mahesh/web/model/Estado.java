@@ -6,12 +6,11 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name="tipo_documento")
-public class TipoDocumento {
+public class Estado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id_tipo_documento")
-    private int idTipoDocumento;
+    @Column(name="id_estado")
+    private int idEstado;
 
     private String nombre;
 }

@@ -8,35 +8,35 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import io.mahesh.web.model.TipoDocumento;
-import io.mahesh.web.repository.TipoDocumentoRepository;
+import io.mahesh.web.model.Tipo;
+import io.mahesh.web.repository.TipoRepository;
 
 
 @Service
 @Transactional(readOnly=true)
-public class TipoDocumentoService {
+public class TipoService {
 	@Autowired
-	private TipoDocumentoRepository repository;
+	private TipoRepository repository;
 
 	@Transactional
-	public TipoDocumento registrar(TipoDocumento reg) {
+	public Tipo registrar(Tipo reg) {
 		return repository.save(reg);
 	}
 	@Transactional
-	public void deleteById(Integer idTipoDocumento) {
-		repository.deleteById(idTipoDocumento);
+	public void deleteById(Integer idTipo) {
+		repository.deleteById(idTipo);
 	}
 	@Transactional
-	public TipoDocumento update(TipoDocumento reg) {
+	public Tipo update(Tipo reg) {
 		return repository.save(reg);
 	}
-	public TipoDocumento findById(Integer id) {
+	public Tipo findById(Integer id) {
 		return repository.findById(id).get();
 	}
-	public List<TipoDocumento> findAll() {
+	public List<Tipo> findAll() {
 		return repository.findAll();
 	}
-	public Page<TipoDocumento> findAll(Pageable pageable) {
+	public Page<Tipo> findAll(Pageable pageable) {
 		return repository.findAll(pageable);
 	}
 }

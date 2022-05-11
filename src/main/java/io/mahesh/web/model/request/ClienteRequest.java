@@ -1,7 +1,5 @@
 package io.mahesh.web.model.request;
-
 import java.util.Date;
-
 import lombok.Data;
 
 @Data
