@@ -53,4 +53,5 @@ public class ClienteService {
 	public Page<Cliente> findAll(Pageable pageable) {
 		return repository.findAll(pageable);
 	}
+	
 }

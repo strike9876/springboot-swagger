@@ -13,4 +13,7 @@ public interface ClienteMovilRepository extends JpaRepository<ClienteMovil,Integ
 
     @Query("select a from ClienteMovil a INNER JOIN a.cliente b where b.idCliente = ?1")
 	List<ClienteMovil> selectByIdCliente(Integer idCliente);
+
+    @Query("select a from ClienteMovil a INNER JOIN a.lineaMovil b where b.idLineaMovil = ?1")
+	List<ClienteMovil> selectByIdLineaMovil(Integer idLineaMovil);
 }
