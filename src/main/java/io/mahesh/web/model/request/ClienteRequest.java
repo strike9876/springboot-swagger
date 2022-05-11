@@ -7,6 +7,6 @@ public class ClienteRequest {
     private int idCliente;
     private String nombreCompleto;
     private int idTipoDocumento;
-    private String nroDocumento;
+    private int nroDocumento;
     private Date fechaNacimiento;
 }

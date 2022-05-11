@@ -21,7 +21,7 @@ public class Cliente {
     private TipoDocumento tipoDocumento;
     
     @Column(name="nro_documento")
-    private String nroDocumento;
+    private int nroDocumento;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name="fecha_nacimiento")
